@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <!-- Bootstrap CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navbar (Same on All Devices) -->
+    <nav class="navbar">
+        <!-- Icons (Left Side) -->
+        <div class="nav-auth">
+            <a href="php/signup.php" style="color: black;">
+            <i class="fa-regular fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Logo (Center) -->
+        <div class="nav-brand">
+            <img src="img/NEXTAGt.png" alt="NEXTAG Logo">
+        </div>
+        
+        <!-- Hamburger Menu (Right Side) -->
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu" onclick="closeMenu()"></div>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <!-- Close Button -->
+        <div class="mobile-close">
+            <i class="fa-solid fa-times" onclick="closeMenu()"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="/new-arrivals">New Arrivals</a>
+            
+            <!-- Women Dropdown -->
+            <div class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileDropdown(event, 'women')">
+                    Women 
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-content" id="women">
+                    <a href="/women/dresses">Dresses</a>
+                    <a href="/women/kurtis">Kurtis</a>
+                    <a href="/women/tops">Tops</a>
+                    <a href="/women/ethnic">Ethnic Wear</a>
+                </div>
+            </div>
+            
+            <!-- Men Dropdown -->
+            <div class="mobile-dropdown">
+                <a href="#" onclick="toggleMobileDropdown(event, 'men')">
+                    Men 
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-content" id="men">
+                    <a href="/men/tshirts">T-Shirts</a>
+                    <a href="/men/shirts">Shirts</a>
+                    <a href="/men/jeans">Jeans</a>
+                    <a href="/men/traditional">Traditional</a>
+                </div>
+            </div>
+            
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
+            <a href="about.php">About Us</a>
+            <a href="/blog">Blog</a>
+        </div>
+    </div>
+
+    <!-- Demo Content -->
+   <img src="img/nav.jpg" style="width: 100%;" alt="">
+
+    <div class="container  mt-5">
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-xl-3 col-md-3 col-sm-12 mb-3 ">
+            <img src="img/suit.jpg" style="height: 400px; width: 500px;" alt="Image 1" class="img-fluid">
+             <!-- <h3 class="text-center" style="text-transform: uppercase;">Female</h3> -->
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="col-xl-3 col-md-3 col-sm-12 mb-3">
+            <img src="img/shirts.jpg" style="height: 400px; width: 500px;" alt="Image 2" class="img-fluid">
+             <!-- <h3 class="text-center" style="text-transform: uppercase;">Men</h3> -->
+        </div>
+
+         <div class="col-xl-3 col-md-3 col-sm-12 mb-3">
+            <img src="img/kidess.jpg" style="height: 400px; width: 500px;" alt="Image 3" class="img-fluid">
+            <!-- <h5 class="text-center" style="text-transform: uppercase;">Kids</h5> -->
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="col-xl-3 col-md-3 col-sm-12 mb-3">
+            <img src="img/back.jpeg" style="height: 400px; width: 500px;" alt="Image 3" class="img-fluid">
+            <!-- <h5 class="text-center" style="text-transform: uppercase;">Kids</h5> -->
+        </div>
+    </div>
+</div>
+
+   <?php
+   include "footer.php";
+   ?>
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const sidebar = document.getElementById('mobileSidebar');
+            const hamburger = document.getElementById('hamburger');
+            
+            menu.classList.toggle('active');
+            sidebar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close Mobile Menu
+        function closeMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const sidebar = document.getElementById('mobileSidebar');
+            const hamburger = document.getElementById('hamburger');
+            
+            menu.classList.remove('active');
+            sidebar.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+
+        // Toggle Mobile Dropdown
+        function toggleMobileDropdown(event, id) {
+            event.preventDefault();
+            const dropdown = document.getElementById(id);
+            const clickedLink = event.currentTarget;
+            
+            // Toggle active class on dropdown content
+            dropdown.classList.toggle('active');
+            
+            // Toggle active class on the clicked link (for arrow rotation)
+            clickedLink.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link (except dropdowns)
+        document.querySelectorAll('.mobile-nav-links > a').forEach(link => {
+            link.addEventListener('click', function() {
+                closeMenu();
+            });
+        });
+
+        // Close dropdown items
+        document.querySelectorAll('.mobile-dropdown-content a').forEach(link => {
+            link.addEventListener('click', function() {
+                closeMenu();
+            });
+        });
+    </script>
+</body>
+</html>

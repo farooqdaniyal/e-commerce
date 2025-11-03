@@ -146,7 +146,7 @@ p {
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #000000;
 }
 
 .nav-auth {
@@ -244,7 +244,7 @@ p {
         }
 
         .nav-auth i:hover {
-            color: #007bff;
+            color: #000000;
         }
 
         /* Logo - Always Center */
@@ -278,7 +278,7 @@ p {
         }
 
         .hamburger:hover span {
-            background: #007bff;
+            background: #000000;
         }
 
         /* Hamburger Animation */
@@ -344,7 +344,7 @@ p {
         }
 
         .mobile-close i:hover {
-            color: #007bff;
+            color: #070707;
         }
 
         /* Mobile Navigation Links */
@@ -364,7 +364,7 @@ p {
         }
 
         .mobile-nav-links > a:hover {
-            color: #007bff;
+            color: #ffdf53;
         }
 
         /* Mobile Dropdown */
@@ -384,7 +384,7 @@ p {
         }
 
         .mobile-dropdown > a:hover {
-            color: #007bff;
+            color: #0d0d0e;
         }
 
         .mobile-dropdown > a i {
@@ -416,8 +416,16 @@ p {
         }
 
         .mobile-dropdown-content a:hover {
-            color: #007bff;
+            color: #000000;
         }
+        .three img{
+            width: 400px;
+            height: 7000px;
+        }
+
+        /* Three Images */
+
+
 
         /* Responsive Adjustments */
         @media (max-width: 480px) {
