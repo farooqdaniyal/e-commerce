@@ -1,9 +1,18 @@
 <?php
+// Database connection
+$servername = "localhost";
+$username = "root";          // Your MySQL username
+$password = "";              // Your MySQL password (usually empty for localhost)
+$dbname = "e-commerce";
 
-$conn = mysqli_connect("localhost","root","","e-commerce");
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if($conn){
-    echo "Not Connected";
+// Check connection
+if (!$conn) {
+    die("❌ Connection failed: " . mysqli_connect_error());
 }
 
+// Set charset to UTF-8
+mysqli_set_charset($conn, "utf8");
 ?>
