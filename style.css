@@ -425,7 +425,11 @@ p {
 
         /* Three Images */
 
-
+.button-nav button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
         /* Responsive Adjustments */
         @media (max-width: 480px) {

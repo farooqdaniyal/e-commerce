@@ -3,14 +3,14 @@ session_start();
 require_once '../php/db.php';
 
 // Check if logged in
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['id'])) {
     header("Location: ../php/login.php");
     exit();
 }
 
 // Check if admin
 if ($_SESSION['role'] != 'admin') {
-    header("Location: ../index.php");
+    header("Location: ../index.html");
     exit();
 }
 
@@ -178,8 +178,8 @@ $user_email = $_SESSION['user_email'];
         
         <ul class="sidebar-menu">
             <li><a href="dashboard.php"><i class="fas fa-home"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fas fa-box"></i> Products</a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="products.php"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="../about.php"><i class="fas fa-shopping-cart"></i> Orders</a></li>
             <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
             <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li>
             <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
