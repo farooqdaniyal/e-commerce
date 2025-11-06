@@ -2,8 +2,8 @@
 session_start();
 require_once 'db.php';
 
-// If already logged in, redirect
-if (isset($_SESSION['user_id'])) {
+// If already logged in, redirect - ✅ USE 'id' NOT 'user_id'
+if (isset($_SESSION['id'])) {
     if ($_SESSION['role'] == 'admin') {
         header("Location: ../dashboard/dashboard.php");
     } else {
@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             // Verify password
             if (password_verify($password, $user['password'])) {
-                // Login successful
-                $_SESSION['user_id'] = $user['id'];
+                // Login successful - ✅ USE 'id' NOT 'user_id'
+                $_SESSION['id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
                 $_SESSION['user_email'] = $user['email'];
                 $_SESSION['role'] = $user['role'];
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($user['role'] == 'admin') {
                     header("Location: ../dashboard/dashboard.php");
                 } else {
-                    header("Location: ../index.php");
+                    header("Location: ../index.html");
                 }
                 exit();
             } else {
@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - E-Commerce</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
     <style>
         body {
@@ -117,6 +118,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
             margin-top: 20px;
         }
+        
+        .input-group-text {
+            background-color: white;
+            border-left: none;
+            cursor: pointer;
+        }
+        
+        .input-group .form-control {
+            border-right: none;
+        }
+        
+        .input-group .form-control:focus {
+            border-right: none;
+            box-shadow: none;
+        }
+        
+        .input-group:focus-within {
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -125,13 +146,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ?>
     <div class="login-container">
         <div class="login-header">
-            <h2>🔐 Admin Login</h2>
-            <p class="text-muted">Enter your credentials</p>
+            <h2>Login</h2>
+            <p class="text-muted"></p>
         </div>
         
         <?php if (!empty($error)): ?>
             <div class="alert alert-danger">
-                <?php echo $error; ?>
+                <i class="fas fa-exclamation-circle"></i> <?php echo $error; ?>
             </div>
         <?php endif; ?>
         
@@ -143,7 +164,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+                <div class="input-group">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    <span class="input-group-text" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
             </div>
             
             <button type="submit" class="btn btn-primary btn-login">Login</button>
@@ -153,5 +179,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('password');
+        
+        togglePassword.addEventListener('click', function() {
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+    });
+    </script>
 </body>
 </html>

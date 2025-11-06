@@ -1,9 +1,9 @@
 <?php
 // Database connection
 $servername = "localhost";
-$username = "root";          // Your MySQL username
-$password = "";              // Your MySQL password (usually empty for localhost)
-$dbname = "e-commerce";
+$username = "root";
+$password = "";
+$dbname = "e_commerce";  // ✅ Underscore (not hyphen)
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -14,5 +14,8 @@ if (!$conn) {
 }
 
 // Set charset to UTF-8
-mysqli_set_charset($conn, "utf8");
+mysqli_set_charset($conn, "utf8mb4");  // ✅ utf8mb4 better hai
+
+// Optional: Display success (for testing only - remove in production)
+// echo "✅ Database connected successfully!";
 ?>
