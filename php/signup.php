@@ -4,7 +4,7 @@ require_once 'db.php';  // Correct (both files in php folder)
 
 
 // If already logged in, redirect
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['user_id'])) {
     header("Location: ../index.php");
     exit();
 }
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
          body {
-            background: url('img') no-repeat center center/cover;
+            background: url('../img/backgroung.avif') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -163,8 +163,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="signup-container">
         <div class="signup-header">
-            <h2>📝 Create Account</h2>
-            <p class="text-muted">Sign up to get started</p>
+            <h2>Sign up </h2>
+            <!-- <p class="text-muted">to get started</p> -->
         </div>
         
         <?php if (!empty($error)): ?>

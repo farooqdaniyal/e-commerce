@@ -1,0 +1,129 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* ✅ Side margin hatane ke liye */
+    gap: 10px; /* ✅ Sirf 10px gap */
+    padding: 0px;
+    width: 100%;
+    margin: 0; /* ✅ Side margin remove */
+}
+
+.product-one {
+    flex: 0 0 calc(25% - 8px); /* ✅ 4 cards per line with 10px gap */
+    margin: 0; /* ✅ Margin remove */
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    margin: 0 20px;
+    /* padding: 10px; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    width: 90%;
+    height: 450px;
+}
+.product-card:hover {
+    transform: translateY(-3px);
+}
+
+.product-two {
+    height: 320px;
+    width: 100%;
+}
+
+.product-two img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.new-pro {
+    width: 100%;
+    justify-content: space-between;
+    margin: 8px 0;
+    align-items: center;
+}
+
+.newww {
+    gap: 5px;
+}
+
+.newww p {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    border: 1px solid;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.add-card a button {
+    font-size: 11px;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background-color: rgb(179, 179, 161);
+    color: black;
+    cursor: pointer;
+}
+
+.black {
+    color: black;
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.paragraph {
+    gap: 10px;
+    margin: 8px 0;
+    /* justify-content: center; */
+}
+
+.paragraph p {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+}
+
+.pppp {
+    text-decoration: line-through;
+    color: rgb(134, 134, 134) !important;
+}
+
+/* ✅ Responsive - Ab 4 cards per line hi rahenge */
+@media (max-width: 1200px) {
+    .product-one {
+        flex: 0 0 calc(25% - 8px); /* ✅ 4 cards per line hi rahega */
+    }
+}
+
+@media (max-width: 992px) {
+    .product-one {
+        flex: 0 0 calc(25% - 8px); /* ✅ 4 cards per line hi rahega */
+    }
+    
+    .product-two {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-one {
+        flex: 0 0 calc(50% - 5px); /* ✅ Tablet pe 2 cards per line */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-one {
+        flex: 0 0 calc(100% - 10px); /* ✅ Mobile pe 1 card per line */
+    }
+    
+    .products-container {
+        gap: 10px;
+        padding: 5px;
+    }
+}

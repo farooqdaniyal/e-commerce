@@ -12,15 +12,31 @@
     
 </head>
 <body>
+     <?php
+session_start();
+?>
+
     <!-- Navbar (Same on All Devices) -->
     <nav class="navbar">
         <!-- Icons (Left Side) -->
         <div class="nav-auth">
-            <a href="php/signup.php" style="color: black;">
-            <i class="fa-regular fa-user"></i></a>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+    <?php if (isset($_SESSION['id'])): ?>
+        <!-- agar user login hai to logout icon dikhao -->
+        <a href="php/logout.php" style="color: black;" title="Logout"
+   onclick="return confirm('Are you sure you want to logout??');">
+    <i class="fa-solid fa-right-from-bracket"></i>
+</a>
+
+    <?php else: ?>
+        <!-- agar user login nahi hai to login/signup icon dikhao -->
+        <a href="php/login.php" style="color: black;" title="Login / Signup">
+            <i class="fa-regular fa-user"></i>
+        </a>
+    <?php endif; ?>
+
+    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
+</div>
 
         <!-- Logo (Center) -->
         <div class="nav-brand">
@@ -47,7 +63,7 @@
 
         <!-- Navigation Links -->
         <div class="mobile-nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="/new-arrivals">New Arrivals</a>
             
             <!-- Women Dropdown -->
@@ -79,8 +95,8 @@
             </div>
             
             <a href="/services">Services</a>
-            <a href="/contact">Contact</a>
-            <a href="about.html">About Us</a>
+            <a href="products.php">product</a>
+            <a href="about.php">About Us</a>
             <a href="/blog">Blog</a>
         </div>
     </div>

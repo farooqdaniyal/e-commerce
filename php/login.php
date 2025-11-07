@@ -3,7 +3,7 @@ session_start();
 require_once 'db.php';
 
 // If already logged in, redirect - ✅ USE 'id' NOT 'user_id'
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['user_id'])) {
     if ($_SESSION['role'] == 'admin') {
         header("Location: ../dashboard/dashboard.php");
     } else {
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($user['role'] == 'admin') {
                     header("Location: ../dashboard/dashboard.php");
                 } else {
-                    header("Location: ../index.html");
+                    header("Location: ../index.php");
                 }
                 exit();
             } else {
