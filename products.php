@@ -10,7 +10,7 @@
     <!-- style cdn -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
-    <link rel="stylesheet" href="productss.css">
+    <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,690 +22,313 @@
       ?>
 
 <div style="height: 100px;"></div>
-      <div class="products-container">
-    <!-- Card 1 -->
+    <div class="products-container">
+    
+    <!-- Product 1 -->
     <div class="product-one">
         <div class="product-card">
             <div class="product-two">
-                <img src="img/baby.jpg" alt="">
+                <img src="img/g-dress-12.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
                     <p>new</p>
-                    <p>-50%</p>
+                    <p>-30%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Floral Print Summer Dress <br> Cotton Blend</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.2,499</p>
+                <p class="pppp">Rs.3,570</p>
             </div>         
         </div>      
     </div>
 
-    <!-- Card 2 -->
+    <!-- Product 2 -->
     <div class="product-one">
         <div class="product-card">
             <div class="product-two">
-                <img src="img/baby.jpg" alt="">
+                <img src="img/g-dress-13.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
+                    <p>hot</p>
+                    <p>-25%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Designer Party Wear Gown <br> Silk Fabric</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.8,999</p>
+                <p class="pppp">Rs.11,999</p>
             </div>         
         </div>      
     </div>
 
-    <!-- Card 3 -->
+    <!-- Product 3 -->
     <div class="product-one">
         <div class="product-card">
             <div class="product-two">
-                <img src="img/baby.jpg" alt="">
+                <img src="img/g-dress-14.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
+                    <p>sale</p>
+                    <p>-40%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Casual Office Wear Suit <br> Linen Material</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.3,799</p>
+                <p class="pppp">Rs.6,332</p>
             </div>         
         </div>      
     </div>
 
-    <!-- Card 4 -->
+    <!-- Product 4 -->
     <div class="product-one">
         <div class="product-card">
             <div class="product-two">
-                <img src="img/baby.jpg" alt="">
+                <img src="img/g-dress-15.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
                     <p>new</p>
-                    <p>-50%</p>
+                    <p>-15%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Evening Cocktail Dress <br> Satin Finish</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.6,499</p>
+                <p class="pppp">Rs.7,645</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 5 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
                     <p>new</p>
-                    <p>-50%</p>
+                    <p>-20%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Kids Cotton T-Shirt <br> Combo Pack of 3</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.899</p>
+                <p class="pppp">Rs.1,124</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 6 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
+                    <p>hot</p>
+                    <p>-35%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Baby Romper Set <br> Organic Cotton</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.1,299</p>
+                <p class="pppp">Rs.1,998</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 7 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
+                    <p>sale</p>
                     <p>-50%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Winter Jacket for Kids <br> Warm Fleece</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.1,599</p>
+                <p class="pppp">Rs.3,198</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 8 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
                     <p>new</p>
-                    <p>-50%</p>
+                    <p>-10%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Baby Shoes Pair <br> Soft Sole</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.799</p>
+                <p class="pppp">Rs.888</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 9 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
+                    <p>hot</p>
+                    <p>-45%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Designer Kurti Set <br> Chiffon Fabric</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.2,199</p>
+                <p class="pppp">Rs.3,998</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 10 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
+                    <p>sale</p>
+                    <p>-60%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Men's Formal Shirt <br> Cotton Blend</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.1,299</p>
+                <p class="pppp">Rs.3,248</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 11 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
                     <p>new</p>
-                    <p>-50%</p>
+                    <p>-25%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Women's Handbag <br> Genuine Leather</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.3,499</p>
+                <p class="pppp">Rs.4,665</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
+    <!-- Product 12 -->
+    <div class="product-one mt-5">
         <div class="product-card">
             <div class="product-two">
                 <img src="img/baby.jpg" alt="">
             </div>
-            <div class="new-pro d-flex">
+            <div class="new-pro mt-4 margin d-flex"style="margin-left: 10px;" >
                 <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
+                    <p>hot</p>
+                    <p>-30%</p>
                 </div>
-                <div class="add-card">
+                <div class="add-card" style="margin-right: 20px;">
                     <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
                 </div>
             </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
+            <div class="product-info" style="margin-left: 10px;">
+                <p class="black">Sports Shoes <br> Running & Gym</p>
             </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
+            <div class="d-flex paragraph" style="margin-left: 10px;">
+                <p>Rs.2,899</p>
+                <p class="pppp">Rs.4,141</p>
             </div>         
         </div>      
     </div>
 
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
-
-    <div class="product-one">
-        <div class="product-card">
-            <div class="product-two">
-                <img src="img/baby.jpg" alt="">
-            </div>
-            <div class="new-pro d-flex">
-                <div class="d-flex newww">
-                    <p>new</p>
-                    <p>-50%</p>
-                </div>
-                <div class="add-card">
-                    <a href=""><button><i class="fa-solid fa-cart-shopping"></i>Add to Card</button></a>
-                </div>
-            </div>    
-            <div class="product-info">
-                <p class="black">Vision Ember Unstitched Fabric <br> Blended</p>
-            </div>
-            <div class="d-flex paragraph">
-                <p>Rs.5,999</p>
-                <p class="pppp">Rs.6,999</p>
-            </div>         
-        </div>      
-    </div>
 </div>
 
-
-    
-
-
-        <div style="height: 200px;"></div>
+<div style="height: 200px;"></div>
            
-       <!-- Footer -->
+<!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -749,11 +372,10 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>Fashion Store
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Your one-stop destination for trendy fashion and accessories. Quality products at affordable prices.
           </p>
         </div>
         <!-- Grid column -->
@@ -765,16 +387,16 @@
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a href="#!" class="text-reset">Women's Wear</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <a href="#!" class="text-reset">Men's Fashion</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <a href="#!" class="text-reset">Kids Collection</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <a href="#!" class="text-reset">Accessories</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -804,13 +426,13 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p><i class="fas fa-home me-3"></i> Mumbai, MH 400001, INDIA</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            info@fashionstore.com
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <p><i class="fas fa-phone me-3"></i> + 91 98765 43210</p>
+          <p><i class="fas fa-print me-3"></i> + 91 98765 43211</p>
         </div>
         <!-- Grid column -->
       </div>
@@ -821,8 +443,8 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="#">FashionStore.com</a>
   </div>
   <!-- Copyright -->
 </footer>
