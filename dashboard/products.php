@@ -1,80 +1,82 @@
 <?php
-session_start();
-require_once '../php/db.php';
-
-// Check if admin
-if (!isset($_SESSION['id']) || $_SESSION['role'] != 'admin') {
-    header("Location: ../php/login.php");
-    exit();
-}
+include '../php/db.php';
+include '../include/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Products - Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container mt-4">
-        <h2>Manage Products</h2>
-        
-        <!-- Add Product Form -->
-        <div class="card mb-4">
-            <div class="card-header">
-                <h5>Add New Product</h5>
-            </div>
-            <div class="card-body">
-                <form action="add-product.php" method="POST">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" name="name" class="form-control mb-2" placeholder="Product Name" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="number" step="0.01" name="price" class="form-control mb-2" placeholder="Price" required>
-                        </div>
-                    </div>
-                    <textarea name="description" class="form-control mb-2" placeholder="Description"></textarea>
-                    <input type="text" name="image" class="form-control mb-2" placeholder="Image File Name">
-                    <input type="text" name="category" class="form-control mb-2" placeholder="Category">
-                    <button type="submit" class="btn btn-success">Add Product</button>
-                </form>
-            </div>
-        </div>
+<div class="container mt-4">
+    <h1>Products Dashboard</h1>
+    <a href="add_product.php" class="btn btn-primary mb-3">
+        <i class="fa fa-plus"></i> Add New Product
+    </a>
 
-        <!-- Products List -->
-        <table class="table table-striped">
-            <thead>
+    <?php if(isset($_GET['success'])): ?>
+        <div class="alert alert-success alert-dismissible fade show">
+            <?php echo htmlspecialchars($_GET['success']); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    <?php endif; ?>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
                 <tr>
                     <th>ID</th>
+                    <th>Image</th>
                     <th>Name</th>
+                    <th>Description</th>
                     <th>Price</th>
-                    <th>Category</th>
+                    <th>Old Price</th>
+                    <th>Discount</th>
+                    <th>Tag</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM products";
-                $result = mysqli_query($conn, $sql);
-                
-                while($product = mysqli_fetch_assoc($result)) {
+                $sql = "SELECT * FROM products ORDER BY id DESC";
+                $result = $conn->query($sql);
+
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()){
+                        echo "<tr>";
+                        echo "<td>".htmlspecialchars($row['id'])."</td>";
+                        
+                        // Image display - FIXED
+                        if(!empty($row['image'])){
+                            $img_path = "../" . $row['image']; // img/filename.jpg → ../img/filename.jpg
+                            if(file_exists($img_path)){
+                                echo "<td><img src='$img_path' width='80' height='80' style='object-fit:cover;border-radius:5px;'></td>";
+                            } else {
+                                echo "<td><span class='text-danger'>Missing</span></td>";
+                            }
+                        } else {
+                            echo "<td><span class='text-muted'>No Image</span></td>";
+                        }
+                        
+                        echo "<td>".htmlspecialchars($row['name'])."</td>";
+                        echo "<td>".htmlspecialchars(substr($row['description'],0,50))."...</td>";
+                        echo "<td>Rs. ".number_format($row['price'])."</td>";
+                        echo "<td>".($row['old_price'] ? "Rs. ".number_format($row['old_price']) : "-")."</td>";
+                        echo "<td>".($row['discount'] ? htmlspecialchars($row['discount']) : "-")."</td>";
+                        echo "<td><span class='badge bg-primary'>".htmlspecialchars($row['tag'])."</span></td>";
+                        
+                        echo "<td class='text-nowrap'>
+                                <a href='edit_product.php?id=".$row['id']."' class='btn btn-warning btn-sm'>
+                                    <i class='fa fa-edit'></i> Edit
+                                </a>
+                                <a href='delete_product.php?id=".$row['id']."' class='btn btn-danger btn-sm' onclick='return confirm(\"Delete this product?\")'>
+                                    <i class='fa fa-trash'></i> Delete
+                                </a>
+                              </td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='9' class='text-center'>No products found</td></tr>";
+                }
                 ?>
-                <tr>
-                    <td><?php echo $product['id']; ?></td>
-                    <td><?php echo $product['name']; ?></td>
-                    <td>$<?php echo $product['price']; ?></td>
-                    <td><?php echo $product['category']; ?></td>
-                    <td>
-                        <a href="edit-product.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
-                        <a href="delete-product.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <?php } ?>
             </tbody>
         </table>
     </div>
-</body>
-</html>
+</div>
+
+<?php include '../include/footer.php'; ?>

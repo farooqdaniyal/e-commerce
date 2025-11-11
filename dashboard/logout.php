@@ -6,6 +6,6 @@ session_unset();
 session_destroy();
 
 // Redirect to login
-header("Location: ../index.html");
+header("Location: ../index-2.php");
 exit();
 ?>

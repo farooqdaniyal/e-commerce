@@ -63,7 +63,7 @@ session_start();
 
         <!-- Navigation Links -->
         <div class="mobile-nav-links">
-            <a href="index.php">Home</a>
+            <a href="index-2.php">Home</a>
             <a href="/new-arrivals">New Arrivals</a>
             
             <!-- Women Dropdown -->

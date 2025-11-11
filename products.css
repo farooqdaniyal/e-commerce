@@ -1,57 +1,62 @@
+/* ===== PRODUCTS CONTAINER ===== */
 .products-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* ✅ Side margin hatane ke liye */
-    gap: 10px; /* ✅ Sirf 10px gap */
-    padding: 0px;
+    justify-content: center;   /* ✅ Center align products */
+    gap: 20px;                 /* ✅ Equal gap between cards */
+    padding: 0 30px;           /* ✅ Space from screen edges */
     width: 100%;
-    margin: 0; /* ✅ Side margin remove */
+    margin: 0 auto;
 }
 
+/* ===== PRODUCT BOX ===== */
 .product-one {
-    flex: 0 0 calc(25% - 8px); /* ✅ 4 cards per line with 10px gap */
-    margin: 0; /* ✅ Margin remove */
+    flex: 0 0 calc(25% - 20px);  /* ✅ 4 cards per row on desktop */
+    margin: 0;
+    box-sizing: border-box;
 }
 
+/* ===== PRODUCT CARD ===== */
 .product-card {
-    background: white;
+    background: #fff;
     border-radius: 10px;
-    margin: 0 20px;
-    /* padding: 10px; */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    width: 90%;
-    height: 480px; 
+    width: 100%;          /* ✅ Full width inside flex */
+    height: 480px;
+    overflow: hidden;
+    margin: 0;             /* ✅ Remove unwanted side spacing */
 }
+
 .product-card:hover {
     transform: translateY(-3px);
 }
 
-.margin{
-    margin-top: 40px !important;
-}
-
+/* ===== PRODUCT IMAGE ===== */
 .product-two {
     height: 320px;
     width: 100%;
 }
 
 .product-two img {
-      width: 100%;
-  height: 350px; /* ya apni card height ke hisaab se */
-  object-fit: cover; /* ya 'contain' try karo depending on need */
-  border-radius: 10px;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    display: block;
 }
 
+/* ===== BADGES & BUTTONS ===== */
 .new-pro {
     width: 100%;
     justify-content: space-between;
     margin: 8px 0;
     align-items: center;
+    display: flex;
 }
 
 .newww {
+    display: flex;
     gap: 5px;
 }
 
@@ -60,8 +65,7 @@
     padding: 2px 8px;
     border-radius: 8px;
     border: 1px solid;
-    color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     margin: 0;
 }
 
@@ -75,6 +79,11 @@
     cursor: pointer;
 }
 
+.add-card a button:hover {
+    background-color: #c5c5a5;
+}
+
+/* ===== PRODUCT TEXT ===== */
 .black {
     color: black;
     margin: 8px 0;
@@ -83,9 +92,9 @@
 }
 
 .paragraph {
+    display: flex;
     gap: 10px;
     margin: 8px 0;
-    /* justify-content: center; */
 }
 
 .paragraph p {
@@ -99,49 +108,42 @@
     color: rgb(134, 134, 134) !important;
 }
 
-/* ✅ Responsive - Ab 4 cards per line hi rahenge */
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* 🖥 Desktop (max 1200px) */
 @media (max-width: 1200px) {
     .product-one {
-        flex: 0 0 calc(25% - 8px); /* ✅ 4 cards per line hi rahega */
+        flex: 0 0 calc(33.33% - 20px);  /* 3 per row */
     }
 }
 
+/* 💻 Tablet (max 992px) */
 @media (max-width: 992px) {
     .product-one {
-        flex: 0 0 calc(25% - 8px); /* ✅ 4 cards per line hi rahega */
+        flex: 0 0 calc(50% - 15px);  /* 2 per row */
     }
-    
-    .product-two {
-        height: 180px;
-    }
-}
 
-@media (max-width: 768px) {
     .product-card {
-    background: white;
-    border-radius: 10px;
-    margin: 0 20px;
-    /* padding: 10px; */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    width: 90%;
-    height: 500px; 
-}
-    .margin{
-        margin-top: 200px !important;
+        height: 450px;
     }
-    .product-one {
-        flex: 0 0 calc(50% - 5px); /* ✅ Tablet pe 2 cards per line */
+
+    .product-two {
+        height: 280px;
     }
 }
 
-@media (max-width: 480px) {
+/* 📱 Mobile (max 600px) */
+@media (max-width: 600px) {
     .product-one {
-        flex: 0 0 calc(100% - 10px); /* ✅ Mobile pe 1 card per line */
+        flex: 0 0 calc(100% - 10px); /* 1 per row */
     }
-    
+
     .products-container {
-        gap: 10px;
-        padding: 5px;
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .product-card {
+        height: auto;
     }
 }
