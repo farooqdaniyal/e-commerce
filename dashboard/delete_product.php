@@ -1,30 +1,33 @@
 <?php
-require_once '../php/db.php';
+include '../php/db.php';
 
-if(!isset($_GET['id'])){
-    header("Location: products.php");
-    exit();
-}
-
-$id = intval($_GET['id']);
-
-// Get image name before deleting
-$sql_get = "SELECT image FROM products WHERE id=$id";
-$result = $conn->query($sql_get);
-$row = $result->fetch_assoc();
-
-// Delete from database
-$sql = "DELETE FROM products WHERE id=$id";
-
-if($conn->query($sql)){
-    // Delete image file
-    if(!empty($row['image']) && file_exists('../'.$row['image'])){
-        unlink('../'.$row['image']);
-    }
+if(isset($_GET['id']) && !empty($_GET['id'])){
+    $id = intval($_GET['id']);
     
-    header("Location: products.php?success=Product deleted successfully");
-    exit();
+    // پہلے product کی details fetch کریں
+    $sql_select = "SELECT image FROM products WHERE id=$id";
+    $result = $conn->query($sql_select);
+    
+    if($result->num_rows > 0){
+        $product = $result->fetch_assoc();
+        
+        // Image delete کریں (اگر موجود ہو)
+        if(!empty($product['image']) && file_exists('../'.$product['image'])){
+            unlink('../'.$product['image']);
+        }
+        
+        // Database سے record delete کریں
+        $sql_delete = "DELETE FROM products WHERE id=$id";
+        if($conn->query($sql_delete)){
+            header("Location: products.php?success=Product deleted successfully");
+        } else {
+            header("Location: products.php?error=Error deleting product");
+        }
+    } else {
+        header("Location: products.php?error=Product not found");
+    }
 } else {
-    die("Error: ".$conn->error);
+    header("Location: products.php");
 }
+exit();
 ?>

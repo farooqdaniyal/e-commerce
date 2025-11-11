@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media.css">
-  <link rel="stylesheet" href="products.css">
+  <link rel="stylesheet" href="productss.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="product-two">
         <img src="<?php echo $row['image']; ?>" alt="">
       </div>
-      <div class="new-pro mt-4 margin d-flex" style="margin-left: 10px;">
+      <div class="new-pro  margin d-flex" style="margin-left: 10px;">
         <div class="d-flex newww">
           <p><?php echo $row['tag']; ?></p>
           <p><?php echo $row['discount']; ?></p>

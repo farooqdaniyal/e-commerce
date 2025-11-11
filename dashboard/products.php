@@ -41,24 +41,42 @@ include '../include/header.php';
                         echo "<tr>";
                         echo "<td>".htmlspecialchars($row['id'])."</td>";
                         
-                        // Image display - FIXED
+                        // Image display with better error handling
+                        $image_displayed = false;
                         if(!empty($row['image'])){
-                            $img_path = "../" . $row['image']; // img/filename.jpg → ../img/filename.jpg
-                            if(file_exists($img_path)){
-                                echo "<td><img src='$img_path' width='80' height='80' style='object-fit:cover;border-radius:5px;'></td>";
-                            } else {
-                                echo "<td><span class='text-danger'>Missing</span></td>";
+                            $clean_image = trim($row['image']);
+                            $image_paths_to_try = [
+                                "../" . $clean_image,
+                                $clean_image,
+                                "../img/" . basename($clean_image)
+                            ];
+                            
+                            foreach($image_paths_to_try as $img_path){
+                                if(file_exists($img_path)){
+                                    echo "<td><img src='$img_path' width='80' height='80' style='object-fit:cover;border-radius:5px;' alt='Product Image'></td>";
+                                    $image_displayed = true;
+                                    break;
+                                }
                             }
-                        } else {
-                            echo "<td><span class='text-muted'>No Image</span></td>";
+                        }
+                        
+                        if(!$image_displayed){
+                            echo "<td><span class='text-danger'>No Image</span></td>";
                         }
                         
                         echo "<td>".htmlspecialchars($row['name'])."</td>";
                         echo "<td>".htmlspecialchars(substr($row['description'],0,50))."...</td>";
-                        echo "<td>Rs. ".number_format($row['price'])."</td>";
-                        echo "<td>".($row['old_price'] ? "Rs. ".number_format($row['old_price']) : "-")."</td>";
+                        echo "<td>Rs. ".number_format($row['price'], 2)."</td>";
+                        echo "<td>".($row['old_price'] > 0 ? "Rs. ".number_format($row['old_price'], 2) : "-")."</td>";
                         echo "<td>".($row['discount'] ? htmlspecialchars($row['discount']) : "-")."</td>";
-                        echo "<td><span class='badge bg-primary'>".htmlspecialchars($row['tag'])."</span></td>";
+                        
+                        // Tag with color coding
+                        $tag_color = 'primary';
+                        if(strtolower($row['tag']) == 'hot') $tag_color = 'danger';
+                        if(strtolower($row['tag']) == 'sale') $tag_color = 'success';
+                        if(strtolower($row['tag']) == 'new') $tag_color = 'info';
+                        
+                        echo "<td><span class='badge bg-$tag_color'>".htmlspecialchars($row['tag'])."</span></td>";
                         
                         echo "<td class='text-nowrap'>
                                 <a href='edit_product.php?id=".$row['id']."' class='btn btn-warning btn-sm'>
@@ -79,4 +97,15 @@ include '../include/header.php';
     </div>
 </div>
 
-<?php include '../include/footer.php'; ?>
+<style>
+.table img {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+.btn-sm {
+    margin: 2px;
+}
+</style>
+
