@@ -10,7 +10,7 @@ if (!isset($_SESSION['id'])) {
 
 // Check if admin
 if ($_SESSION['role'] != 'admin') {
-    header("Location: ../index.html");
+    header("Location: ../index-2.php");
     exit();
 }
 

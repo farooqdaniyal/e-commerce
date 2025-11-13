@@ -1,317 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NEXTAG - E-commerce Store</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <style>
-      /* Importing Google font - Open Sans */
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Footer Section Styling */
+    *{
+      color: #000 !important;
+    }
+.footer-img {
+    background-color: #ffffffff;
+    color: white;
+    padding: 50px;
+    flex-wrap: wrap;
+}
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Open Sans', sans-serif;
-      }
+.footer-one {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid;
+}
 
-      .footer {
-        width: 100%;
-        background: #10182F;
-        margin-top: 50px;
-      }
+.footer-a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
 
-      .footer .footer-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 3.5rem;
-        padding: 60px;
-      }
+.footer-a a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-top: 15px;
+    font-weight: 200;
+    transition: all 0.3s ease;
+}
 
-      .footer-row .footer-col h4 {
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
+.footer-a a:hover {
+    transform: translateX(8px);
+    color: #ffffff;
+}
 
-      .footer-col .links {
-        margin-top: 10px;
-      }
+.footer-a h3 {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 
-      .footer-col .links li {
-        list-style: none;
-        margin-bottom: 12px;
-      }
+.footer-end img {
+    height: 50px;
+    width: 150px;
+}
 
-      .footer-col .links li a {
-        text-decoration: none;
-        color: #bfbfbf;
-        transition: all 0.3s ease;
-        font-size: 14px;
-      }
+.footer-a p {
+    font-size: 14px;
+    margin-top: 20px;
+}
 
-      .footer-col .links li a:hover {
-        color: #fff;
-        padding-left: 5px;
-      }
+.footer-aa {
+    display: flex;
+    font-size: 18px;
+    gap: 10px;
+    margin-top: 15px;
+}
 
-      .footer-col p {
-        margin: 20px 0;
-        color: #bfbfbf;
-        max-width: 300px;
-        line-height: 1.6;
-        font-size: 14px;
-      }
+.footer-aa i {
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
 
-      .footer-col form {
-        display: flex;
-        gap: 5px;
-        margin-top: 20px;
-      }
+.footer-aa i:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+}
 
-      .footer-col input {
-        height: 45px;
-        border-radius: 6px;
-        background: none;
-        width: 100%;
-        outline: none;
-        border: 1px solid #7489C6;
-        caret-color: #fff;
-        color: #fff;
-        padding-left: 15px;
-        font-size: 14px;
-      }
+.footerr-end p {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+}
 
-      .footer-col input::placeholder {
-        color: #ccc;
-      }
+.footerr-end p span {
+    color: #cc0000;
+}
 
-      .footer-col form button {
-        background: #28a745;
-        color: white;
-        outline: none;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: 0.3s ease;
-        white-space: nowrap;
-      }
-
-      .footer-col form button:hover {
-        background: #218838;
-        transform: translateY(-2px);
-      }
-
-      .footer-col .icons {
-        display: flex;
-        margin-top: 25px;
-        gap: 20px;
-        cursor: pointer;
-      }
-
-      .footer-col .icons i {
-        color: #afb6c7;
-        font-size: 18px;
-        transition: all 0.3s ease;
-        background: rgba(255,255,255,0.1);
-        padding: 10px;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .footer-col .icons i:hover {
-        color: #fff;
-        background: #28a745;
-        transform: translateY(-3px);
-      }
-
-      .footer-bottom {
-        background: #0a1120;
-        padding: 20px 60px;
-        border-top: 1px solid #2a3a5a;
-      }
-
-      .footer-bottom-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #bfbfbf;
-        font-size: 14px;
-      }
-
-      .footer-bottom-links {
-        display: flex;
-        gap: 20px;
-      }
-
-      .footer-bottom-links a {
-        color: #bfbfbf;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .footer-bottom-links a:hover {
-        color: #fff;
-      }
-
-      .payment-methods {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-      }
-
-      .payment-methods i {
-        font-size: 24px;
-        color: #bfbfbf;
-        transition: color 0.3s ease;
-      }
-
-      .payment-methods i:hover {
-        color: #fff;
-      }
-
-      @media (max-width: 768px) {
-        .footer .footer-row {
-          padding: 40px 20px;
-          gap: 2rem;
-        }
-
-        .footer-col form {
-          display: block;
-        }
-
-        .footer-col form :where(input, button) {
-          width: 100%;
-        }
-
-        .footer-col form button {
-          margin: 10px 0 0 0;
-        }
-
-        .footer-bottom {
-          padding: 20px;
-        }
-
-        .footer-bottom-content {
-          flex-direction: column;
-          gap: 15px;
-          text-align: center;
-        }
-
-        .footer-bottom-links {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .payment-methods {
-          justify-content: center;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .footer .footer-row {
-          padding: 30px 15px;
-          gap: 1.5rem;
-        }
-
-        .footer-row .footer-col {
-          flex: 1 1 100%;
-        }
-
-        .footer-col .icons {
-          justify-content: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <section class="footer">
-      <div class="footer-row">
-        <div class="footer-col">
-          <h4>Shop</h4>
-          <ul class="links">
-            <li><a href="#">Men's Fashion</a></li>
-            <li><a href="#">Women's Wear</a></li>
-            <li><a href="#">Kids Collection</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Sale & Offers</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Customer Care</h4>
-          <ul class="links">
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Shipping Info</a></li>
-            <li><a href="#">Returns & Exchanges</a></li>
-            <li><a href="#">Size Guide</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Track Order</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul class="links">
-            <li><a href="#">About NEXTAG</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Store Locator</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Newsletter</h4>
-          <p>
-            Subscribe to get special offers, free giveaways, and exclusive deals. 
-            Be the first to know about new collections and sales.
-          </p>
-          <form action="#">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-          <div class="icons">
-            <i class="fa-brands fa-facebook-f" title="Facebook"></i>
-            <i class="fa-brands fa-twitter" title="Twitter"></i>
-            <i class="fa-brands fa-instagram" title="Instagram"></i>
-            <i class="fa-brands fa-youtube" title="YouTube"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <div class="copyright">
-            © 2024 NEXTAG. All rights reserved.
-          </div>
-          <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
-          </div>
-          <div class="payment-methods">
-            <i class="fa-brands fa-cc-visa" title="Visa"></i>
-            <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
-            <i class="fa-brands fa-cc-paypal" title="PayPal"></i>
-            <i class="fa-brands fa-cc-apple-pay" title="Apple Pay"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+.footerr-end p span:hover {
+    color: #dbd5d5;
+}
+  </style>
+</head>
+<body>
+    <div class="footer-img footer-one">
+    <div class="footer-a">
+        <h3>Company</h3>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press & Blog</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+    <div class="footer-a">
+        <h3>Customer Service</h3>
+        <a href="#">Help & Support</a>
+        <a href="#">Returns & Exchanges</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-a">
+        <h3>SHOP</h3>
+        <a href="#">New Arrivals</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Sale Items</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Accessories</a>
+    </div>
+    <div class="footer-a footer-end">
+        <img src="img/NEXTAGt.png" alt="NEXTAG Logo">
+        <p>Your premier destination for premium bags and accessories.<br>Discover the latest trends in fashion with our<br>curated collection of stylish products.</p>
+         <div class="footer-aa d-flex">
+         <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-brands fa-github"></i>
+         </div>
+    </div>
+    <div style="width: 100%;height: 1px; color: yellow; background-color: rgb(141, 141, 122); margin-top: 70px;">
+    </div>
+    <div class="footerr-end">
+        <p>Copyright ©2025 All rights reserved | This template is made with ❤️ by <span>NEXTAG</span></p>
+    </div>
+</div>
+</body>
 </html>

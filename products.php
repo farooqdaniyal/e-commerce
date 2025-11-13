@@ -11,6 +11,32 @@
   <link rel="stylesheet" href="media.css">
   <link rel="stylesheet" href="productss.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    /* Add to Cart Button Styles */
+    .add-to-cart-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .add-to-cart-btn:hover {
+        background: #0056b3;
+        color: white;
+        text-decoration: none;
+    }
+
+    .add-to-cart-btn i {
+        margin-right: 5px;
+    }
+  </style>
 </head>
 <body>
 <?php
@@ -55,7 +81,16 @@ if (mysqli_num_rows($result) > 0) {
           <p><?php echo $row['discount']; ?></p>
         </div>
         <div class="add-card" style="margin-right: 20px;">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button></a>
+          <button class="add-to-cart-btn" 
+                  onclick="addToCart(
+                    <?php echo $row['id']; ?>,
+                    '<?php echo addslashes($row['name']); ?>',
+                    <?php echo $row['price']; ?>,
+                    '<?php echo $row['image']; ?>',
+                    '<?php echo addslashes($row['description']); ?>'
+                  )">
+            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+          </button>
         </div>
       </div>
       <div class="product-info" style="margin-left: 10px;">
