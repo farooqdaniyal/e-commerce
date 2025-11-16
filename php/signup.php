@@ -62,19 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
          body {
-            background: url('../img/backgroung.avif') no-repeat center center/cover;
+            /* background: url('../img/back-s.avif') center/cover no-repeat;*/
+            height: 100vh; 
+            width: 100%;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
-            margin: 0;
+            margin: 0; 
+            background-color: #333333;
+
         }
 
         /* 🧾 Signup Container */
         .signup-container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px 40px;
+            /* background: rgba(255, 255, 255, 0.95); */
+            background-color: #ffffffff;
+            padding: 20px 40px;
             border-radius: 15px;
             width: 100%;
             max-width: 420px;

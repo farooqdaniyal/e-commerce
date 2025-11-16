@@ -47,7 +47,7 @@ include "header.php";
         
         <!-- Column 3 -->
         <div class="col-xl-3 col-md-3 col-sm-12 mb-3">
-            <img src="img/back.jpeg" style="height: 400px; width: 500px;" alt="Image 3" class="img-fluid">
+            <img src="img/kids-shirt.jpg" style="height: 400px; width: 500px;" alt="Image 3" class="img-fluid">
             <!-- <h5 class="text-center" style="text-transform: uppercase;">Kids</h5> -->
         </div>
     </div>

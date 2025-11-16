@@ -179,7 +179,8 @@ $user_email = $_SESSION['user_email'];
         <ul class="sidebar-menu">
             <li><a href="dashboard.php"><i class="fas fa-home"></i> Dashboard</a></li>
             <li><a href="products.php"><i class="fas fa-box"></i> Products</a></li>
-            <li><a href="../about.php"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li><a href="user.php"><i class="fas fa-shopping-cart"></i>Users</a></li>
+            <li><a href="admin_orders.php"><i class="fas fa-shopping-cart"></i>Productss</a></li>
             <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
             <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li>
             <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>

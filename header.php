@@ -668,7 +668,7 @@
             <i class="fa-solid fa-magnifying-glass" title="Search" onclick="openSearch()"></i>
             
             <!-- Product Slider Trigger Button -->
-            <i class="fa-solid fa-bars" title="Products" onclick="showProductSlider()"></i>
+            <!-- <i class="fa-solid fa-bars" title="Products" onclick="showProductSlider()"></i> -->
         </div>
 
         <!-- Logo (Center) -->
@@ -737,7 +737,10 @@
                 </div>
                 <div class="cart-actions">
                     <button class="continue-shopping" onclick="closeCartSidebar()">Continue Shopping</button>
-                    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    <a href="php/checkout.php" style="text-decoration: none;">
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                    </a>
+                    <!-- <a href="php/checkout.php"><button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button></a> -->
                 </div>
             </div>
         </div>
@@ -788,16 +791,17 @@
             
             <!-- Men Dropdown -->
             <div class="mobile-dropdown">
-                <a href="#" onclick="toggleMobileDropdown(event, 'men')">
+                   <!-- <a href="#" onclick="toggleMobileDropdown(event, 'men')"> -->
+                <a href="men.php">
                     Men 
                     <i class="fas fa-chevron-down"></i>
                 </a>
-                <div class="mobile-dropdown-content" id="men">
+                <!-- <div class="mobile-dropdown-content" id="men">
                     <a href="/men/tshirts">T-Shirts</a>
                     <a href="/men/shirts">Shirts</a>
                     <a href="/men/jeans">Jeans</a>
                     <a href="/men/traditional">Traditional</a>
-                </div>
+                </div> -->
             </div>
             
             <a href="/services">Services</a>
@@ -809,6 +813,13 @@
 
     <!-- JavaScript -->
     <script>
+        function proceedToCheckout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty. Please add items to proceed to checkout.');
+        return false;
+    }
+    return true;
+}
         // Sample products data
         const products = [
             { 
